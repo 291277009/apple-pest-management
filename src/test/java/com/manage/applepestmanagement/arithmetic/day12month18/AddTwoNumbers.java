@@ -1,4 +1,4 @@
-package com.manage.applepestmanagement.arithmetic;
+package com.manage.applepestmanagement.arithmetic.day12month18;
 
 import org.junit.Test;
 

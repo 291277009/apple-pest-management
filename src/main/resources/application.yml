@@ -19,3 +19,12 @@ spring:
         max-wait: 10000 # 连接池最大阻塞等待时间（使用负值表示没有限制）
     timeout: 10000 # 连接超时时间（毫秒）
     block-when-exhausted: true
+
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    suffix: .html
+    prefix: classpath:/templates/
+    content-type: text/html
+    check-template-location: true
+    enabled: true

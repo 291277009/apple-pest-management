@@ -1,4 +1,4 @@
-package com.manage.applepestmanagement.controller;
+package com.manage.applepestmanagement.controller.demo;
 
 import com.manage.applepestmanagement.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;

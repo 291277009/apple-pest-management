@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar-default navbar-side" role="navigation">
+    <div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+    <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu">
+
+            <li>
+                <a id="dashboard" href="index.html" th:href="index"><i class="fa fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+                <a id="ui_element" href="ui-elements.html" th:href="ui-elements"><i class="fa fa-desktop"></i> UI Elements</a>
+            </li>
+            <li>
+                <a id="chart" href="chart.html" th:href="chart"><i class="fa fa-bar-chart-o"></i> Charts</a>
+            </li>
+            <li>
+                <a id="tab_panel" href="tab-panel.html" th:href="tab-panel"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+            </li>
+
+            <li>
+                <a id="table" href="table.html" th:href="table"><i class="fa fa-table"></i> Responsive Tables</a>
+            </li>
+            <li>
+                <a id="form" href="form.html" th:href="form"><i class="fa fa-edit"></i> Forms </a>
+            </li>
+
+
+            <li>
+                <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Second Level Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a id="empty" href="empty.html" th:href="empty"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+            </li>
+        </ul>
+
+    </div>
+
+</nav>
+</body>
+</html>

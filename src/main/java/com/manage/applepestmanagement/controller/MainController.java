@@ -15,4 +15,34 @@ public class MainController {
     public String indexController() {
         return "index";
     }
+
+    @GetMapping("/chart")
+    public String chartController() {
+        return "chart";
+    }
+
+    @GetMapping("/empty")
+    public String emptyController() {
+        return "empty";
+    }
+
+    @GetMapping("/table")
+    public String tableController() {
+        return "table";
+    }
+
+    @GetMapping("/form")
+    public String formController() {
+        return "form";
+    }
+
+    @GetMapping("/ui-elements")
+    public String elementsController() {
+        return "ui-elements";
+    }
+
+    @GetMapping("/tab-panel")
+    public String tabController() {
+        return "tab-panel";
+    }
 }

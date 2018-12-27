@@ -1,4 +1,4 @@
-package com.manage.applepestmanagement.controller;
+package com.manage.applepestmanagement.controller.demo;
 
 import com.manage.applepestmanagement.po.User;
 import com.manage.applepestmanagement.service.UserService;
@@ -19,7 +19,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class DemoUserController {
 
     @Autowired
     private UserService userService;

@@ -45,4 +45,10 @@ public class MainController {
     public String tabController() {
         return "tab-panel";
     }
+
+    @GetMapping("/login")
+    public String loginController() {
+        return "login";
+    }
+
 }

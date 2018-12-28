@@ -1,8 +1,6 @@
 package com.manage.applepestmanagement.utils;
 
 
-
-
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.Cipher;
@@ -18,7 +16,7 @@ import java.security.SecureRandom;
  * 此类用于生成能力平台TOKEN值
  * @author 
  * @datetime 
- */  
+ */
 public class MD5Util {  
   
     /*** 

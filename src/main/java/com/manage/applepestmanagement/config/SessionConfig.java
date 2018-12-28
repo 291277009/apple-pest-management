@@ -26,7 +26,9 @@ public class SessionConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/user/logout")
                 .excludePathPatterns("/login/images/**")
                 .excludePathPatterns("/login/**")
-
+                .excludePathPatterns("**/*.woff")
+                .excludePathPatterns("**/*.woff2")
+                .excludePathPatterns("**/*.ttf")
                 //拦截路径
                 .addPathPatterns("/**");
     }
@@ -37,10 +39,10 @@ public class SessionConfig implements WebMvcConfigurer {
         @Override
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
             HttpSession session = request.getSession();
-            if (session.getAttribute(session.getId()) != null){
+            if (session.getAttribute(session.getId()) != null) {
                 return true;
             }
-            response.getWriter().write("login");
+            response.sendRedirect("login");
             return false;
         }
     }

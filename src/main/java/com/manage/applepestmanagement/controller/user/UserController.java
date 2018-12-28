@@ -2,7 +2,6 @@ package com.manage.applepestmanagement.controller.user;
 
 import com.manage.applepestmanagement.po.User;
 import com.manage.applepestmanagement.service.UserService;
-import com.manage.applepestmanagement.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +22,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private RedisUtil redisUtil;
-
     @PostMapping("/doLogin")
     public String login(String name, String password, HttpSession session) {
+//        name = MD5Util.string2MD5(name);
+//        password = MD5Util.string2MD5(password);
         User user = userService.selectUserByName(name);
         if (user != null && password.equals(user.getPassword())) {
             session.setAttribute(session.getId(), user);

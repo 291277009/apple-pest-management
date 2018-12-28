@@ -18,7 +18,7 @@ import java.util.List;
  * Time: 10:48
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/user1")
 public class DemoUserController {
 
     @Autowired
@@ -35,8 +35,8 @@ public class DemoUserController {
     }
 
     @PostMapping("/addUser")
-    public void addUser(@Param("user") User user) {
-        userService.addUser(user);
+    public User addUser(@Param("user") User user) {
+        return userService.addUser(user);
     }
 
     @DeleteMapping("/deleteUser")

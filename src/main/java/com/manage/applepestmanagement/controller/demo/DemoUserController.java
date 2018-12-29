@@ -35,8 +35,8 @@ public class DemoUserController {
     }
 
     @PostMapping("/addUser")
-    public User addUser(@Param("user") User user) {
-        return userService.addUser(user);
+    public void addUser(@Param("user") User user) {
+        userService.addUser(user);
     }
 
     @DeleteMapping("/deleteUser")

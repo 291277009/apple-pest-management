@@ -26,6 +26,7 @@ public class SessionConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/user/logout")
                 .excludePathPatterns("/login/images/**")
                 .excludePathPatterns("/login/**")
+                .excludePathPatterns("/user/register")
                 .excludePathPatterns("**/*.woff")
                 .excludePathPatterns("**/*.woff2")
                 .excludePathPatterns("**/*.ttf")
@@ -42,7 +43,7 @@ public class SessionConfig implements WebMvcConfigurer {
             if (session.getAttribute(session.getId()) != null) {
                 return true;
             }
-            response.sendRedirect("login");
+            response.sendRedirect("/login");
             return false;
         }
     }

@@ -33,13 +33,10 @@
 <h1>klasikal Login Form</h1>
 <div class="login-form">
     <div class="head-info">
-        <label class="lbl-2">
-            <input type="button" id="register" style="display: none;">
-        </label>
-        <label class="lbl-3">
-        </label>
+        <label class="lbl-2"></label>
+        <label class="lbl-3"></label>
     </div>
-    <div class="login_form">
+    <div id="login" class="login_form" th:style="'display:'+ @{(${message} ? 'none' : 'block')}">
         <div class="avtar">
             <img src="images/avtar.png" th:src="@{/login/images/avtar.png}"/>
         </div>
@@ -57,7 +54,24 @@
             </div>
         </form>
     </div>
-
+    <div id="register" class="login_form" th:style="'display:'+ @{(${message} ? 'block' : 'none')}">
+        <div class="avtar">
+            <img src="images/avtar.png" th:src="@{/login/images/avtar.png}"/>
+        </div>
+        <form method="post" action="/user/register">
+            <input name="name" type="text" class="text" value="Username"
+                   onfocus="this.value = '';" onblur="if (this.value == '')
+						   {this.value = 'Username';}" th:value="${message} ? ${message} : 'Username'">
+            <div class="key">
+                <input name="password" type="password" value="Password"
+                       onfocus="this.value = '';" onblur="if (this.value == '')
+						   {this.value = 'Password';}">
+            </div>
+            <div class="signin">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
 
 </div>
 <div class="copy-rights">
@@ -65,7 +79,14 @@
 </div>
 
 <script>
-    
+    $(".lbl-2").click(function () {
+        $("#login").css({display: "none"})
+        $("#register").css({display: "block"})
+    });
+    $(".lbl-3").click(function () {
+        $("#login").css({display: "block"})
+        $("#register").css({display: "none"})
+    });
 
 </script>
 </body>

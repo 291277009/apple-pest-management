@@ -25,7 +25,7 @@ public interface UserDao {
     List<User> findAllUser();
 
     @Insert("INSERT INTO user(name, password, age, money) VALUES(#{user.name}, #{user.password}, #{user.age}, #{user.money})")
-    User insertUser(@Param("user") User user);
+    void insertUser(@Param("user") User user);
 
     @Delete("DELETE FROM user WHERE id = #{id}")
     void deleteUser(@Param("id") Integer id);

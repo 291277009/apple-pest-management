@@ -26,8 +26,8 @@ public class UserService {
         return userDao.findAllUser();
     }
 
-    public User addUser(User user) {
-        return userDao.insertUser(user);
+    public void addUser(User user) {
+        userDao.insertUser(user);
     }
 
     public void removeUser(Integer id) {
